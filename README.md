@@ -5,11 +5,11 @@ This is a mini Sentinel SIEM lab that is used to create a real world attack and 
 
 The first thing to do is to create an Azure free Account, then create a sentinel workspace while selecting your subscription and also giving your tenant’s name. 
  
-<img width="444" alt="image" src="https://github.com/user-attachments/assets/b4b77710-dd94-4087-b90c-82fb2ff5a1a5">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/b4b77710-dd94-4087-b90c-82fb2ff5a1a5">
 
 
 The picture above shows how to create the sentinel workspace, next is deployment of the workspace. 
-<img width="488" alt="image" src="https://github.com/user-attachments/assets/4b48e1b3-bbba-4eb1-b92f-0bad4a0d9ec1">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/4b48e1b3-bbba-4eb1-b92f-0bad4a0d9ec1">
 
  
 After deployment, Select the workspace created and click add to  the Microsoft sentinel workspace has been created and added. The next step is to deploy the sentinel training lab. Here I am using Microsoft ingested data from the lab to perform all the SOC training throughout the lab.
@@ -67,7 +67,7 @@ I can also create my own custom rule template to detect an attack.
 2.	Select query rule
 3.	The Mapping is refined based on your 
 
-<img width="484" alt="image" src="https://github.com/user-attachments/assets/f4a2ee17-34e3-4ce2-8977-449b2535c680">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/f4a2ee17-34e3-4ce2-8977-449b2535c680">
 
 The sample  query I created above is run every 5 hours(can be set to minutes) to detects successful logon events (EventID 4624) outside of regular business hours (before 9 AM or after 6 PM). It extracts the hour from the logon timestamp and filters events accordingly. The result shows the logon time, computer, account, IP address, and hour of the event for analysis.
 
