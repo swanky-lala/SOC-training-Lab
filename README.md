@@ -166,7 +166,7 @@ I am using a MITRE attack T1098 attack from the MITRE website. In this threat hu
 •	Navigate Hunting page, 
 •	Click on filter and select tecniques then check T1098( account manipulation)
  
-<img width="483" alt="image" src="https://github.com/user-attachments/assets/e80b432d-7326-4b51-92cc-e3946e02643a">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/e80b432d-7326-4b51-92cc-e3946e02643a">
 
 Once applied, then check all the query, click on the run selected query and wait to see if it comes with any result. 
  
@@ -176,11 +176,11 @@ After the running of the selected query, we found out there are 5 result on  Add
 
 Click the view result and run the query to give you all the account and event that has the particular threat we are hunting. From there, you can bookmark it and upgrade it to an incident just the same way we did in the above threat hunting documentation. 
  
-<img width="498" alt="image" src="https://github.com/user-attachments/assets/f8466ddc-535d-4664-a74f-383a3694746f">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/f8466ddc-535d-4664-a74f-383a3694746f">
 
 Expanding one of the Host will even give you more details about the account manipulation and which account you need to actually investigate directly.  
  
-<img width="487" alt="image" src="https://github.com/user-attachments/assets/e6a12e98-06b1-476b-b616-b38c2f7f6a66">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/e6a12e98-06b1-476b-b616-b38c2f7f6a66">
 
 When navigate to the bookmark, then you will see all the bookmarked threat and you can then upgrade it to incident.
 
@@ -194,7 +194,7 @@ Steps
 1.	Select watchlist 
 2.	Select Network Addresses 
 
-<img width="487" alt="image" src="https://github.com/user-attachments/assets/d7dff24b-1142-42b5-a1f2-51285cfc5fbd">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/d7dff24b-1142-42b5-a1f2-51285cfc5fbd">
 
 3.	Create from Template and Now import the IP address 
 
