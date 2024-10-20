@@ -18,37 +18,37 @@ DEPLOYMENT OF SENTINEL TRAINING LAB SOLUTION
 
 First, Navigate to Azure HOME and on the general search pane, search for Microsoft sentinel training lab, the click on create and choose the same Resource group we previously created and same sentinel workspace to integrate the training lab to my existing workspace. That can be seen on the picture below. 
 
- <img width="439" alt="image" src="https://github.com/user-attachments/assets/61deb1ab-0947-46ab-a621-972c5ffe7165">
+ <img width="826" alt="image" src="https://github.com/user-attachments/assets/61deb1ab-0947-46ab-a621-972c5ffe7165">
 
 Once click Review + create the deployment starts and it can take almost 15 minutes 
 
- <img width="824" alt="image" src="https://github.com/user-attachments/assets/2715484c-fc9a-495e-81b3-413e79c908d0">
+ <img width="826" alt="image" src="https://github.com/user-attachments/assets/2715484c-fc9a-495e-81b3-413e79c908d0">
 
 Here we have succefully deployed the ingested data and our sentinel lab is good to go. 
 
-<img width="479" alt="image" src="https://github.com/user-attachments/assets/4eb2a4c9-7550-4d08-be52-13cd869252ca">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/4eb2a4c9-7550-4d08-be52-13cd869252ca">
 
 Next step is to configure Microsoft Sentinel playbook to allow it to access sentinel .
 •	Seletc the Resource group
 •	Select the azuresentinel-Get-GeoFromIpAndTagIncident 
 •	Select General settings, then click Edit API connection and then Authorize Microsoft playbook on sentinel by selecting account you deployed the sentinel, save the authorization and that is all.
  
-<img width="739" alt="image" src="https://github.com/user-attachments/assets/1335b613-2e8c-4d14-b4e5-8668d1b0c9e4">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/1335b613-2e8c-4d14-b4e5-8668d1b0c9e4">
 
 Data connectors in Microsoft sentinel
 In this section, I will enable data connectors to ingest data that would be investigated in Microsoft sentinel. Firstly, I will configure/ enable Azure Activity Data connector 
-<img width="487" alt="image" src="https://github.com/user-attachments/assets/41c8227a-96c9-4e99-b7ed-179226909215">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/41c8227a-96c9-4e99-b7ed-179226909215">
 
 Launch the activity Log, from the connector or content hub if not already installed, click on it and launch Azure Policy Assignment wizard  to configure it very well. 
 
-<img width="489" alt="image" src="https://github.com/user-attachments/assets/1ea0d90a-6dba-4307-9b0d-a36563208b2b">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/1ea0d90a-6dba-4307-9b0d-a36563208b2b">
 
 Then Select your subscription and resource group on scope, check the parameters and select the workspace and configure the effect. Then create and the Activitiy is now integrated in your Microsoft sentinel.
 
  Let’s now connect Microsoft defender for Cloud to Microsoft Sentinel. 
 From Connector Page, click on defender and select the subscription, then connect and the bidirectional connection of Azure defender has been connected. 
  
-<img width="482" alt="image" src="https://github.com/user-attachments/assets/bb6f200a-87d4-4344-bfed-848ce20b3314">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/bb6f200a-87d4-4344-bfed-848ce20b3314">
 
 Threat intelligence connector using TAXII API is not currently working…. Will come back to it. 
 
@@ -59,7 +59,7 @@ Navigate to Analytic rule.
 Select the template section and see all the templates used to detect security anomalies.
 You can also search for rule type and view/ select the rule you want to apply
 
-<img width="490" alt="image" src="https://github.com/user-attachments/assets/eec5a832-c458-4129-ae24-5426eb3915ad">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/eec5a832-c458-4129-ae24-5426eb3915ad">
 
 I can also create my own custom rule template to detect an attack.
 
@@ -75,23 +75,23 @@ In the automated response, select the action that will happen, either notify the
 
 Once created, you can search the rule in the add filter pane and you will see the template. 
  
-<img width="609" alt="image" src="https://github.com/user-attachments/assets/999b335d-0595-426a-9cc5-b8c7efea9854">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/999b335d-0595-426a-9cc5-b8c7efea9854">
 
 
 You can also create Microsoft incident alert rule by just following these steps 
 
-<img width="515" alt="image" src="https://github.com/user-attachments/assets/3678e6ac-3c67-49ba-b6a5-eb5c7e6e12e0">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/3678e6ac-3c67-49ba-b6a5-eb5c7e6e12e0">
 
  After adding the automated response, then click review and create. These are just samples of how incident rules are created and managed in Sentinel. 
 
-<img width="427" alt="image" src="https://github.com/user-attachments/assets/9fac4498-caad-4f24-807c-69fff8d30ce6">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/9fac4498-caad-4f24-807c-69fff8d30ce6">
 
 Incident Investigation and Incident management 
 How doe incident get investigate. After the Alerts has been generated, The SOC team or analyst can investigate the incident by going to the incident section  and selecting the incident to be investigated. I am going to investigate a sample incident below. 
 1.	Select incident
 2.	Click on the incident to be investigated
    
-<img width="481" alt="image" src="https://github.com/user-attachments/assets/b6da016b-5ff3-4689-a7d1-5c003cc5bdad">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/b6da016b-5ff3-4689-a7d1-5c003cc5bdad">
 
 4.	Click on view full details to expand the incident
 5.	Once opened, you can do the following 
@@ -103,23 +103,23 @@ e.	Investigate further
 f.	Opening the entities show whom the account is associated with in this incident is AdeleV@contoso.onMicrosoft.com. 
 g.	Incident action is what to do to the affected account (disable by running playbook, create automation rule or even create team members to help investigate the incident).
  
-<img width="488" alt="image" src="https://github.com/user-attachments/assets/b10b09f6-a1a9-4486-8434-8458d9a954ee">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/b10b09f6-a1a9-4486-8434-8458d9a954ee">
 
 Let us investigate further. 
 
 Selecting the investigate, it will map the account compromised or entity compromised and we can see what is connected, whom the incident is assigned to and also more insight from the investigation.
  
-<img width="483" alt="image" src="https://github.com/user-attachments/assets/b4134ce8-4831-4ac4-8d74-e9cb4ef8f131">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/b4134ce8-4831-4ac4-8d74-e9cb4ef8f131">
 
 Once you click any of the geo IP data mapping, you can even dive dipper in running a playbook to remediate the account or select the account will give you full details of the account owner. After this, you can head back to the incident to update the status of the incident and document. 
 
 Opening another incident that occurred multiple time can even show you more graphical evidence when accessing and looking at an incident. On the action beside the investigate, we can even add the incident to Threat intelligence.
 
-<img width="486" alt="image" src="https://github.com/user-attachments/assets/aba0e851-56a8-4e62-80ea-ade901d30a73">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/aba0e851-56a8-4e62-80ea-ade901d30a73">
 
 Simply clicking on alert will take you back to Log of where the incident originated and that would help and support in the investigation. It will help to check if the incident is correlated with other event.
 
-<img width="484" alt="image" src="https://github.com/user-attachments/assets/a45c3fcf-fc5c-4414-b88d-16431fc3475e">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/a45c3fcf-fc5c-4414-b88d-16431fc3475e">
 
 TAG
 Also, you can add tag to the incident and know exactly where the incident is coming from, the region and know if you have to block the region it is coming from.
@@ -131,28 +131,28 @@ Threat hunting is when you search for a specific event that was not probably cap
 •	Navigate to Hunting 
 •	Search for solrigate or the name of the threat and run the queries if found. 
 
-<img width="503" alt="image" src="https://github.com/user-attachments/assets/f3f98b21-4bbb-4665-b255-b2b3f0308ef5">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/f3f98b21-4bbb-4665-b255-b2b3f0308ef5">
 
 We can also add the solarigate query to a live stream to see how it is working and and see the affected computers. 
 After we have run the solorigate inventory query, the result is showing three (3 )account in which the compromise affected 3 host. Expanding on the result will give us more details about the solrigate. 
  
-<img width="501" alt="image" src="https://github.com/user-attachments/assets/d000f5ba-0b04-4656-b643-bb97a3aa8c00">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/d000f5ba-0b04-4656-b643-bb97a3aa8c00">
 
 View result to see the affected Host and to bookmark it so we can see it in the hunting page where we will either assign to SOC team or anaylst. 
  
-<img width="486" alt="image" src="https://github.com/user-attachments/assets/67eadaad-0b7b-49b9-98b0-486632f1327f">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/67eadaad-0b7b-49b9-98b0-486632f1327f">
 
 Click on Add to bookmark and give the necessary name you would remember or like to call it. After that, create the bookmark. 
 
-<img width="481" alt="image" src="https://github.com/user-attachments/assets/47d61f28-1983-4d9a-b2db-701e17a47d48">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/47d61f28-1983-4d9a-b2db-701e17a47d48">
 
 From the Hunting page, go to Bookmark, check the threat/host you bookmarked and the click to either add it to existing incident or a new incident where you will assign it to a SOC analyst or Security analyst for further Actions by either isolating the host or anything else to contain it.  
 
-<img width="567" alt="image" src="https://github.com/user-attachments/assets/8f584e19-a7b6-4dc0-89c3-ecad13bcdd2d">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/8f584e19-a7b6-4dc0-89c3-ecad13bcdd2d">
 
 Here we have seen the bookmarked threat and the next is to create an incident using the threat and assign it to a SOC analyst team that will take care of it.
  
-<img width="485" alt="image" src="https://github.com/user-attachments/assets/16b0903b-f647-420d-bf71-7d2906434799">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/16b0903b-f647-420d-bf71-7d2906434799">
 
 Adding Indicator of Compromise IOC
 After our investigation, we might want to add the ip address to threat intelligence as indicator of compromise. Then, when the IP I seen, it can be flagged malicious.
@@ -184,7 +184,7 @@ Expanding one of the Host will even give you more details about the account mani
 
 When navigate to the bookmark, then you will see all the bookmarked threat and you can then upgrade it to incident.
 
-<img width="531" alt="image" src="https://github.com/user-attachments/assets/23d3502a-9322-408e-9693-5bb89db63cc7">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/23d3502a-9322-408e-9693-5bb89db63cc7">
 
 WATCHLIST
 
@@ -198,9 +198,9 @@ Steps
 
 3.	Create from Template and Now import the IP address 
 
-<img width="462" alt="image" src="https://github.com/user-attachments/assets/71b1f83f-91fc-466f-b595-1794411bacfe">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/71b1f83f-91fc-466f-b595-1794411bacfe">
 
 Next, go to Watchlist and see the added watchlist from where you can watch the Logs for the IP. 
-<img width="483" alt="image" src="https://github.com/user-attachments/assets/55cf2d45-a73d-43e6-b24f-3fa3afe32f35">
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/55cf2d45-a73d-43e6-b24f-3fa3afe32f35">
 
 
