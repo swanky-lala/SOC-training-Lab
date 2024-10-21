@@ -212,7 +212,7 @@ Steps
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/71b1f83f-91fc-466f-b595-1794411bacfe">
 
-Next, go to Watchlist and see the added watchlist from where you can watch the Logs for the IP. 
+Next, go to MyWatchlist and see the added watchlist from where you can watch the Logs for the IP. 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/55cf2d45-a73d-43e6-b24f-3fa3afe32f35">
 
 
