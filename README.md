@@ -1,7 +1,9 @@
 # SOC-training-Lab
-SOC TRAINING LAB USING  MICROSOFT SENTINEL CLOUD SIEM
+**SOC TRAINING LAB USING  MICROSOFT SENTINEL CLOUD SIEM**
 
-This is a mini Sentinel SIEM lab that is used to create a real world attack and how to remediate it. 
+**This mini-lab helps create a real-world attack scenario and remediation, Threat management, Threat hunting, Incidence response using Microsoft Sentinel SIEM.** 
+
+**Setting Up Microsoft Sentinel Workspace**
 
 The first thing to do is to create an Azure free Account, then create a sentinel workspace while selecting your subscription and also giving your tenant’s name. 
  
@@ -9,14 +11,17 @@ The first thing to do is to create an Azure free Account, then create a sentinel
 
 
 The picture above shows how to create the sentinel workspace, next is deployment of the workspace. 
+
+**Deploy the Sentinel Workspace**
+   
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/4b48e1b3-bbba-4eb1-b92f-0bad4a0d9ec1">
 
  
 After deployment, Select the workspace created and click add to  the Microsoft sentinel workspace has been created and added. The next step is to deploy the sentinel training lab. Here I am using Microsoft ingested data from the lab to perform all the SOC training throughout the lab.
 
-DEPLOYMENT OF SENTINEL TRAINING LAB SOLUTION
+**DEPLOYMENT OF SENTINEL TRAINING LAB SOLUTION**
 
-First, Navigate to Azure HOME and on the general search pane, search for Microsoft sentinel training lab, the click on create and choose the same Resource group we previously created and same sentinel workspace to integrate the training lab to my existing workspace. That can be seen on the picture below. 
+First, Navigate to Azure HOME and on the general search pane, search for Microsoft sentinel training lab, then click on create and choose the same Resource group we previously created and same sentinel workspace to integrate the training lab to my existing workspace. That can be seen on the picture below. 
 
  <img width="826" alt="image" src="https://github.com/user-attachments/assets/61deb1ab-0947-46ab-a621-972c5ffe7165">
 
@@ -28,6 +33,8 @@ Here we have succefully deployed the ingested data and our sentinel lab is good 
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/4eb2a4c9-7550-4d08-be52-13cd869252ca">
 
+**Configuring Microsoft Sentinel Playbooks**
+
 Next step is to configure Microsoft Sentinel playbook to allow it to access sentinel .
 •	Seletc the Resource group
 •	Select the azuresentinel-Get-GeoFromIpAndTagIncident 
@@ -35,7 +42,8 @@ Next step is to configure Microsoft Sentinel playbook to allow it to access sent
  
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/1335b613-2e8c-4d14-b4e5-8668d1b0c9e4">
 
-Data connectors in Microsoft sentinel
+**Data connectors in Microsoft sentinel**
+
 In this section, I will enable data connectors to ingest data that would be investigated in Microsoft sentinel. Firstly, I will configure/ enable Azure Activity Data connector 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/41c8227a-96c9-4e99-b7ed-179226909215">
 
@@ -45,6 +53,8 @@ Launch the activity Log, from the connector or content hub if not already instal
 
 Then Select your subscription and resource group on scope, check the parameters and select the workspace and configure the effect. Then create and the Activitiy is now integrated in your Microsoft sentinel.
 
+**Coonecting MS Defender**
+
  Let’s now connect Microsoft defender for Cloud to Microsoft Sentinel. 
 From Connector Page, click on defender and select the subscription, then connect and the bidirectional connection of Azure defender has been connected. 
  
@@ -52,20 +62,22 @@ From Connector Page, click on defender and select the subscription, then connect
 
 Threat intelligence connector using TAXII API is not currently working…. Will come back to it. 
 
-**Analytic Rule **
-This rule is known as security detection. It is used to detect what anomaly is happening in the sentinel.
+**Analytics Rules for Anomaly Detection**
+
+This rule is known as security detection rule for anomalies detecion. It is used to detect what anomaly is happening in the sentinel.
 Steps :
-Navigate to Analytic rule. 
-Select the template section and see all the templates used to detect security anomalies.
+1. Navigate to Analytic rule. 
+2. Select the template section and see all the templates used to detect security anomalies.
 You can also search for rule type and view/ select the rule you want to apply
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/eec5a832-c458-4129-ae24-5426eb3915ad">
 
+**Custom Reule creation**
 I can also create my own custom rule template to detect an attack.
 
 1.	Click on create
 2.	Select query rule
-3.	The Mapping is refined based on your 
+3.	The Mapping is refined based on the IP or resources you are using to create the rule
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/f4a2ee17-34e3-4ce2-8977-449b2535c680">
 
@@ -77,7 +89,6 @@ Once created, you can search the rule in the add filter pane and you will see th
  
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/999b335d-0595-426a-9cc5-b8c7efea9854">
 
-
 You can also create Microsoft incident alert rule by just following these steps 
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/3678e6ac-3c67-49ba-b6a5-eb5c7e6e12e0">
@@ -86,7 +97,8 @@ You can also create Microsoft incident alert rule by just following these steps
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/9fac4498-caad-4f24-807c-69fff8d30ce6">
 
-Incident Investigation and Incident management 
+**Incident Investigation & Management**
+
 How doe incident get investigate. After the Alerts has been generated, The SOC team or analyst can investigate the incident by going to the incident section  and selecting the incident to be investigated. I am going to investigate a sample incident below. 
 1.	Select incident
 2.	Click on the incident to be investigated
@@ -124,7 +136,7 @@ Simply clicking on alert will take you back to Log of where the incident origina
 TAG
 Also, you can add tag to the incident and know exactly where the incident is coming from, the region and know if you have to block the region it is coming from.
 
-Threat Hunting 
+**Threat Hunting & MITRE Attack Process**
 
 Threat hunting is when you search for a specific event that was not probably captured or alerted. This can also been done on Sentinel. Assuming we want to investigate a solarigate threat which has been handed over to us by our threat research team. We can use this approach below to tackle it. 
 
@@ -160,8 +172,8 @@ This can be done in different way but navigating to the incident we created abov
  
 <img width="821" alt="image" src="https://github.com/user-attachments/assets/d8ba00f9-0971-4044-beab-a02eb5c477c0">
 
-Proactive Hunting process MITRE Attack
-I am using a MITRE attack T1098 attack from the MITRE website. In this threat hunting, I am going to hunt for that specific threat assuming it was announced, and we got the intel from a MITRE website or blog release. To hunt for it follow the steps:
+**Proactive Hunting process MITRE Attack**
+I am using a MITRE attack T1098 attack from the MITRE website. In this threat hunting, I am going to hunt for that specific threat assuming it was announced or given to me by the CISO,or we got the intel from a MITRE website or blog release. To hunt for it follow the steps:
 
 •	Navigate Hunting page, 
 •	Click on filter and select tecniques then check T1098( account manipulation)
@@ -186,7 +198,7 @@ When navigate to the bookmark, then you will see all the bookmarked threat and y
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/23d3502a-9322-408e-9693-5bb89db63cc7">
 
-WATCHLIST
+**WATCHLIST**
 
 Next is Adding a watch list: Assuming the CIO notified you that there will be a penetration testing on the network of your organization and provided the Ip address of the tools that would be used to conduct the test in a CSV file, how do you keep an eye on it. You can create a watchlist that will help you in checking and monitoring the activities that is happening particularly by that IP address in order not to raise false alarm. 
 
