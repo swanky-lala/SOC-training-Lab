@@ -60,7 +60,58 @@ From Connector Page, click on defender and select the subscription, then connect
  
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/bb6f200a-87d4-4344-bfed-848ce20b3314">
 
-Threat intelligence connector using TAXII API is not currently working…. Will come back to it. 
+**Integrating MISP (Malware Information Sharing Platform) Threat Intelligence with Microsoft Sentinel**
+
+Threat intelligence connector using TAXII API is not currently working…. So i decided to find an alternative because threat intelligence is very important in cyber security and incident response as a whole. 
+
+Threat intelligence is essential for detecting and responding to cyber threats. It provides timely and actionable information about potential attacks, allowing organizations to identify risks and take preventive action. By integrating threat intelligence into security operations, teams can enhance their ability to detect and respond to incidents quickly, minimizing damage and improving overall security.
+
+MISP (Malware Information Sharing Platform) Installation and Setup 
+
+	1.	Set up Ubuntu VM:
+Create an Ubuntu virtual machine (VM) in Azure. Keep it simple to minimize costs. Use your default admin account and later create a local user for MISP.
+Ubuntu VM: For this use case, I created an Ubuntu virtual machine (VM) in Azure. To minimize costs, I opted for a low-resource VM.
+
+Important Note
+
+During installation, the user “MISP” will be created, either using the default account or a newly created one. I used the default admin account initially and later changed the password for RDP access.
+	2.	Install MISP:
+SSH into the VM and run the following commands to install MISP:
+
+```
+  sudo apt-get update -y && sudo apt-get upgrade -y
+  sudo systemctl reboot
+  wget -O /tmp/INSTALL.sh https://raw.githubusercontent.com/MISP/MISP/2.4/INSTALL/INSTALL.sh
+  bash /tmp/INSTALL.sh
+```
+i
+	3.	When prompted, create the “MISP” user account during the install and allow it to run as “MISP”.
+	4.	Save the MISP authentication key from the output. If you miss it, you can retrieve it later using the following:
+ ```
+cat /home/misp/MISP-authkey.txt
+```
+5. Set Local Password for the MISP user after the installation
+```
+sudo passwd misp
+```
+6. Install the neccessary desktop environment and tools:
+   ```
+   sudo DEBIAN_FRONTEND=noninteractive apt-get -y install xfce4
+   sudo apt-get -y install xrdp
+   sudo ufw allow 3389
+   sudo service xrdp restart
+   sudo apt install firefox -y
+   ```
+7. 
+
+
+
+
+
+
+
+
+
 
 **Analytics Rules for Anomaly Detection**
 
