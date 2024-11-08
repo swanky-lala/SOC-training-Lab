@@ -60,23 +60,31 @@ From Connector Page, click on defender and select the subscription, then connect
  
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/bb6f200a-87d4-4344-bfed-848ce20b3314">
 
-**Integrating MISP (Malware Information Sharing Platform) Threat Intelligence with Microsoft Sentinel**
+
+
+
+***Integrating MISP (Malware Information Sharing Platform) Threat Intelligence with Microsoft Sentinel***
+
 
 Threat intelligence connector using TAXII API is not currently working…. So i decided to find an alternative because threat intelligence is very important in cyber security and incident response as a whole. 
 
-Threat intelligence is essential for detecting and responding to cyber threats. It provides timely and actionable information about potential attacks, allowing organizations to identify risks and take preventive action. By integrating threat intelligence into security operations, teams can enhance their ability to detect and respond to incidents quickly, minimizing damage and improving overall security.
+Threat intelligence is essential for detecting and responding to cyber threats. It provides timely and actionable information about potential attacks, allowing organizations to identify risks and take preventive action. Integrating threat intelligence into security operations, helps teams to enhance their ability to detect and respond to incidents quickly, minimizing damage and improving overall security.
 
-MISP (Malware Information Sharing Platform) Installation and Setup 
+**MISP (Malware Information Sharing Platform) Installation and Setup** 
 
 	1.	Set up Ubuntu VM:
 Create an Ubuntu virtual machine (VM) in Azure. Keep it simple to minimize costs. Use your default admin account and later create a local user for MISP.
 Ubuntu VM: For this use case, I created an Ubuntu virtual machine (VM) in Azure. To minimize costs, I opted for a low-resource VM.
 
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/05a8d819-979d-4d76-805f-7342766c2353">
+
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/80c0bfed-753a-45b2-be09-85fbe10f4b65">
+
 Important Note
 
 During installation, the user “MISP” will be created, either using the default account or a newly created one. I used the default admin account initially and later changed the password for RDP access.
 	2.	Install MISP:
-SSH into the VM and run the following commands to install MISP:
+After creating the virtual machine, SSH into the VM and run the following commands to install MISP:
 
 ```
   sudo apt-get update -y && sudo apt-get upgrade -y
@@ -84,12 +92,22 @@ SSH into the VM and run the following commands to install MISP:
   wget -O /tmp/INSTALL.sh https://raw.githubusercontent.com/MISP/MISP/2.4/INSTALL/INSTALL.sh
   bash /tmp/INSTALL.sh
 ```
+
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/82557e9a-0f4c-4f79-af19-05aebb6218af">
+
+In the above picture, I integrated an Ubuntu 24.04 version and later found out it is not supported so I spined another 22.04 ubuntu virtual machine.
+
 i
 	3.	When prompted, create the “MISP” user account during the install and allow it to run as “MISP”.
 	4.	Save the MISP authentication key from the output. If you miss it, you can retrieve it later using the following:
- ```
+
+```
 cat /home/misp/MISP-authkey.txt
 ```
+ AFter the installation, the output will look similar to this below :
+ 
+ <img width="826" alt="image" src="https://github.com/user-attachments/assets/b50d16d9-f885-414b-892c-7e1dc6abf992">
+ 
 5. Set Local Password for the MISP user after the installation
 ```
 sudo passwd misp
@@ -102,7 +120,12 @@ sudo passwd misp
    sudo service xrdp restart
    sudo apt install firefox -y
    ```
-7. 
+7. Configuring the MISP Threat Intelligence Platform
+
+	1.	RDP to the Ubuntu server using the MISP user credentials.
+	2.	Log into the server, and after the initial setup, navigate to Sync Actions > List Feeds. Enable the default feeds and cache them by selecting “Fetch and store all feed data.” You can add more feeds later from the 			official MISP feed list here : https://www.misp-project.org/feeds/
+	3.	
+
 
 
 
